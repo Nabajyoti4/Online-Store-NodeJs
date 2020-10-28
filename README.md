@@ -3,6 +3,6 @@ A simple node js application for online product selling with node api and mongo 
 
 Use localhost 127.0.0.1:3000
 
-##npm start
+## npm start
 
 To start the application
