@@ -1,6 +1,7 @@
 const express = require('express');
 const bodyParser = require('body-parser');
 const path = require('path');
+const db = require('./util/database');
 
 const app = express();
 
@@ -11,6 +12,8 @@ app.set('views', 'views');
 // routes
 const adminRoutes = require('./routes/admin')
 const shopRoutes = require('./routes/shop')
+
+
 
 //controllers
 const errorController = require('./controllers/error')

@@ -1,7 +1,7 @@
-const products = []
-
+const db = require('../util/database');
 module.exports = class Product {
-    constructor(title, imageUrl, description, price){
+    constructor(id,title, imageUrl, description, price){
+        this.id = id,
         this.title = title;
         this.imageUrl = imageUrl;
         this.description = description;
@@ -9,16 +9,20 @@ module.exports = class Product {
     }
 
     save(){
-        this.id = Math.floor(Math.random() * 100).toString();
-        products.push(this);
+   
+  
+    }
+
+    static deleteById(id){
+    
     }
 
     static fetchAll(){
-        return products
+       return  db.execute('SELECT * FROM products');
     }
 
     static findById(id){
-        return products.find(product => product.id === id);
+       
     }
 
 }
